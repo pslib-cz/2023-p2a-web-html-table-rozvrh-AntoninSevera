@@ -1,8 +1,10 @@
 table {
     border-collapse: collapse;
+    background-color: aliceblue;
 }
 .time {
     font-size: 0.25rem;
+    color: rgb(224, 224, 224)
 }
 tr > th {
     background-color: rgb(130, 149, 156);
@@ -15,4 +17,47 @@ th, td {
     text-align: center;
     border: 2px solid grey;
     padding: 0.25rem;
+}
+.date {
+    font-size: 0.5rem;
+    color: rgb(224, 224, 224);
+}
+body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    grid-template-areas: 
+    'fixshedule thisweek'
+    'nextweek designed';
+}
+.fixed-shedule {
+    grid-area: fixshedule;
+}
+.this-week {
+    grid-area: thisweek;
+}
+.next-week {
+    grid-area: nextweek;
+}
+.this-week--designed {
+    grid-area: designed;
+}
+.change {
+    background-color: rgba(194, 14, 26, 0.55);
+}
+.holidays {
+    background-color: rgb(33,90,148);
+}
+.designed {
+    background-image: url(./background.jpg);
+    background-size: cover;
+}
+.designed td {
+    border: 1px solid black;
+}
+.cell {
+    background-color: rgba(208, 208, 208, 0.592);
+}
+.xborder {
+    border: none;
 }
